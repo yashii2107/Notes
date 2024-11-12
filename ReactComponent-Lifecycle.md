@@ -16,7 +16,7 @@ When Mounting a component, 4 methods get called :
 The constructor method is called, by React, every time you make a component, it is called with props as argument.
 nd you should always start by calling the super(props) before anything else, this will initiate the parent's constructor method and allows the component to inherit methods from its parent (React.Component).
 
-``` class Header extends React.Component {
+<pre>``` class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {favoritecolor: "red"};
@@ -28,7 +28,7 @@ nd you should always start by calling the super(props) before anything else, thi
   }
 }
 
-ReactDOM.render(<Header />, document.getElementById('root'));```
-
+ReactDOM.render(<Header />, document.getElementById('root'));
+</pre>
 Output: My favourite color is red
 
