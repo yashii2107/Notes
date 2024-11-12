@@ -28,7 +28,7 @@ nd you should always start by calling the super(props) before anything else, thi
   }
 }
 
-ReactDOM.render(<Header />, document.getElementById('root'));
+ReactDOM.render(<Header />, document.getElementById('root'));```
 
 Output: My favourite color is red
 
