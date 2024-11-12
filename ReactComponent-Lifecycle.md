@@ -84,8 +84,8 @@ class Header extends React.Component {
   }
   render() {
     return (
-      {<h1>My Favorite Color is {this.state.favoritecolor}</h1>}
-    );
+      &lt;h1&gt;My Favorite Color is {this.state.favoritecolor}&lt;/h1&gt;
+    ); 
   }
 }
 
