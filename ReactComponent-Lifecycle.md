@@ -49,7 +49,7 @@ It takes state as an argument, and returns an object with changes to the state.
   }
   render() {
     return (
-      <!-- <h1>My Favorite Color is {this.state.favoritecolor}</h1> -->
+      {<h1>My Favorite Color is {this.state.favoritecolor}</h1>}
     );
   }
 }
@@ -84,7 +84,7 @@ class Header extends React.Component {
   }
   render() {
     return (
-      <!-- <h1>My Favorite Color is {this.state.favoritecolor}</h1> -->
+      {<h1>My Favorite Color is {this.state.favoritecolor}</h1>}
     );
   }
 }
@@ -93,4 +93,6 @@ ReactDOM.render(<Header />, document.getElementById('root'));
 </pre>
 
 output: here after render the color after one sec will change
+
+
 
