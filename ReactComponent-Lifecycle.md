@@ -49,7 +49,7 @@ It takes state as an argument, and returns an object with changes to the state.
   }
   render() {
     return (
-      {<h1>My Favorite Color is {this.state.favoritecolor}</h1>}
+      &lt;h1&gt;My Favorite Color is {this.state.favoritecolor}&lt;/h1&gt;
     );
   }
 }
@@ -94,5 +94,81 @@ ReactDOM.render(<Header />, document.getElementById('root'));
 
 output: here after render the color after one sec will change
 
+**Updating Phase** (second phase)
+
+A component is updated whenever there is a change in the component's state or props.
+
+React has five built-in methods that gets called, in this order, when a component is updated:
+
+1.getDerivedStateFromProps()
+2.shouldComponentUpdate()
+3.render()
+4.getSnapshotBeforeUpdate()
+5.componentDidUpdate()
+
+
+**getDerivedStateFromProps()**
+
+<pre>
+```
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {favoritecolor: "red"};
+  }
+  static getDerivedStateFromProps(props, state) {
+    return {favoritecolor: props.favcol };
+  }
+  changeColor = () => {
+    this.setState({favoritecolor: "blue"});
+  }
+  render() {
+    return (
+      <div>
+      &lt;h1&gt;My Favorite Color is {this.state.favoritecolor}&lt;/h1&gt;
+      <button type="button" onClick={this.changeColor}>Change color</button>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<Header favcol="yellow"/>, document.getElementById('root'));
+</pre>
+
+output : My fav color is yellow (here on clicking color will not change to blue)
+
+**shouldComponentUpdate()**
+
+In the shouldComponentUpdate() method you can return a Boolean value that specifies whether React should continue with the rendering or not.
+
+The default value is true.
+
+<pre>
+```
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {favoritecolor: "red"};
+  }
+  shouldComponentUpdate() {
+    return false;
+  }
+  changeColor = () => {
+    this.setState({favoritecolor: "blue"});
+  }
+  render() {
+    return (
+      <div>
+      &lt;h1&gt;My Favorite Color is {this.state.favoritecolor}&lt;/h1&gt;
+      <button type="button" onClick={this.changeColor}>Change color</button>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<Header />, document.getElementById('root'));
+</pre>
+
+output: here shouldComponentUpdate value is false so component will not render and colorwill not change on clicking button
 
 
