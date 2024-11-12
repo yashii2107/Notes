@@ -209,7 +209,7 @@ class Header extends React.Component {
   render() {
     return (
       <div>
-        <h1>My Favorite Color is {this.state.favoritecolor}</h1>
+       &lt;h1 &gt;My Favorite Color is {this.state.favoritecolor}&lt;/h1&gt;
         <div id="div1"></div>
         <div id="div2"></div>
       </div>
