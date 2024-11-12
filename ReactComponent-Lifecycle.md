@@ -265,7 +265,7 @@ class Container extends React.Component {
     return (
       <div>
       {myheader}
-      lt;button&gt;type="button" onClick={this.delHeader}>Delete Header&lt;/button&gt;
+      &lt;button&gt;type="button" onClick={this.delHeader}>Delete Header&lt;/button&gt;
      
       </div>
     );
@@ -278,7 +278,7 @@ class Child extends React.Component {
   }
   render() {
     return (
-      <h1>Hello World!</h1>
+     &lt;h1&gt; hello world &lt;/h1&gt;
     );
   }
 }
