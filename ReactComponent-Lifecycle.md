@@ -126,7 +126,7 @@ class Header extends React.Component {
     return (
       <div>
       &lt;h1&gt;My Favorite Color is {this.state.favoritecolor}&lt;/h1&gt;
-      <button type="button" onClick={this.changeColor}>Change color</button>
+&lt;button&gt;type="button" onClick={this.changeColor}>Change color&lt;/button&gt;
       </div>
     );
   }
@@ -160,7 +160,7 @@ class Header extends React.Component {
     return (
       <div>
       &lt;h1&gt;My Favorite Color is {this.state.favoritecolor}&lt;/h1&gt;
-      &lt;button&gt;ype="button" onClick={this.changeColor}>Change color&lt;/button&gt;
+      &lt;button&gt;type="button" onClick={this.changeColor}>Change color&lt;/button&gt;
        
       </div>
     );
